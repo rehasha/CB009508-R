@@ -142,7 +142,7 @@
 
     <section class="ticket_booking">
 
-    <h1>Purchase Tickets</h1>
+    <h1 id="tic">Purchase Tickets</h1>
     <div class="parent">
 
       <div class="grid-container">
@@ -171,7 +171,7 @@
       </div>
     </div>
 
-    <p>NOTE: For children under age 3, Entrance is free</p>
+    <p id="free">NOTE: For children under age 3, Entrance is free</p>
 
     <div class="booking-form" id="boxform">
       <form  class="contact-col frmtickets" id="frmPurchase">
@@ -180,12 +180,14 @@
                   <td>Activity: </td>
                   <td>
                     <div class="inputBox">
+
                       <select name="activity" id="activity" class="select__item">
                         <option value="" selected disabled>Select an Activity </option>
                         <option value="0">Wreck and Reef Diving</option>
                         <option value="1">Safari</option>
                         <option value="2">Sri Lankan History</option>
-                      </select> 
+                      </select>
+
                     </div>
                   </td> 
                 </tr>  
@@ -274,53 +276,31 @@
                     
                     <input id="AddOrder" type="button" value="Add to Order" class="submit-btn">
 
-                    <div id="divOrder" >
-                    <table id="tbl_order" style="display: none;" >
-                            <thead>
-                                <tr>
-                                    <th>Category</th>
-                                    <th>Adult</th>
-                                    <th>Children</th>
-                                    <th>Date</th>
-                                    <th>Duration</th>
-                                    <th>Total</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbody_order"></tbody>
-                            <tfoot>
-                                <tr id="table_divider">
-                                    <th colspan="4">Food Tokens</th>
-                                    <th colspan="1" id="thFtokens">0</th>
-                                    <th colspan="1" id="pthFtokens">0.00</th>
-                                    <th colspan="1"></a></th>
-                                </tr>
-                                <tr id="">
-                                    <th colspan="4">Annual Passes</th>
-                                    <th colspan="1" id="thApasses">0</th>
-                                    <th colspan="1" id="pthApasses">0.00</th>
-                                    <th colspan="1"></th>
-                                </tr>
-                                <tr id="table_divider-final">
-                                    <th colspan="4">Grand Total</th>
-                                    <th colspan="2" style="text-align: center;"> LKR <span id="thGrandTot">0.00</span></th>
-                                    <th colspan="1"></th>
-                                </tr>
-                            </tfoot>
-                    </table>
-                    </div>
-
                     <input id="checkLoyality" type="button" value="Check Loyality" class="submit-btn">
                     <p id="overallOrder">Cost of the Overall order : LKR <span id="overallGtotal">0.00</span></p>
                     <input id="placeOrder" type="button" value="Place Order" class="submit-btn">
                    
 
                 </form>
+                <table id="table">
+                  <thead>
+                    <tr>
+                        <th>Pass Type</th>
+                        <th>No of Adults</th>
+                        <th>No ofChildren</th>
+                        <th>No of Tokens</th>
+                        <th>Date</th>
+                        <th>Duration</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_order"></tbody>
+                </table>
 
             </div> 
             </section>
 
-
+          </div>
     <footer>
     <section class="footer">
       <div class="social">
@@ -348,7 +328,8 @@
       </p>
     </section>
     
-    </footer>
+    </footer> 
+    <script src="Activity.js"></script>
     </body>
 </html>
 

@@ -118,10 +118,21 @@ nav ul li.active a{
     margin-top: 5px;
 }
 
+#tic{
+    margin-bottom: 5px;
+    color: #fff;
+}
+
 #tickets{
     padding-left: 30px;
     padding-top: 10px;
     margin-bottom: 20px;
+}
+
+#free{
+    font-size: larger;
+    margin-top: 10px;
+    font-weight: 800;
 }
 
 .submit-btn{
